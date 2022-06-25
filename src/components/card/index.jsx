@@ -1,8 +1,8 @@
 import React from 'react'
-import { useHistory } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 function Card({ id, title, image_url }) {
-  const history = useHistory()
+  const history = useNavigate()
 
   function handleNavigateToDetail() {
     history.push(`/details/${id}`)

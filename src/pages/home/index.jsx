@@ -1,5 +1,5 @@
-import React from 'react'
-import api from '../../../services/api'
+import React, { useState } from 'react'
+import api from '../../services/api'
 import CardList from '../../components/card-list'
 import './style.scss'
 
@@ -55,7 +55,7 @@ function Home() {
         </div>
       </form>
       <section className="section">
-        <Cardlist list={loadedList} />
+        <CardList list={loadedList} />
       </section>
     </section>
   )

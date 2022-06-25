@@ -1,19 +1,17 @@
 import React from 'react'
-import {BrowserRouter} from 'react-router-dom'
-import Routes from './routes'
+import Home from './pages/home'
 import Nav from './components/nav'
 import './styles/bulma.scss'
 import './styles/global.scss'
 
 
 function App() {
-
   return (
-    
-    <BrowserRouter> 
-      <Nav/>
-      <Routes/>
-    </BrowserRouter>
+    <div>
+      <Nav />
+      <Home />
+      
+    </div>
   )
 }
 
