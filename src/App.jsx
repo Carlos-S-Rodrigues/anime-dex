@@ -1,16 +1,16 @@
 import React from 'react'
-import Home from './pages/home'
-import Nav from './components/nav'
+import { BrowserRouter } from 'react-router-dom'
+import SwitchPage from './Route/SwitchPage'
+
 import './styles/bulma.scss'
 import './styles/global.scss'
-
 
 function App() {
   return (
     <div>
-      <Nav />
-      <Home />
-      
+      <BrowserRouter>
+        <SwitchPage />
+      </BrowserRouter>
     </div>
   )
 }

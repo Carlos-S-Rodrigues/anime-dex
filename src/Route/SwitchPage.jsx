@@ -1,10 +1,11 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
-import Home from '../src/pages/home'
-import Details from '../src/pages/details'
-import NotFound from '../src/pages/not-found'
+import Home from '../components/home/Home'
+import Details from '../components/details/Details'
+import NotFound from '../components/not-found/NotFound'
+import Nav from '../components/nav/Nav'
 
-function Switch() {
+function SwitchPage() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
@@ -14,4 +15,4 @@ function Switch() {
   )
 }
 
-export default Switch
+export default SwitchPage
