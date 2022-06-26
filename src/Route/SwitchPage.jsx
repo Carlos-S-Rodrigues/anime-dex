@@ -8,7 +8,7 @@ import Nav from '../components/nav/Nav'
 function SwitchPage() {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
+      <Route path="/" element={((<Nav />), (<Home />))} />
       <Route path="/details/:id" element={<Details />} />
       <Route element={<NotFound />} />
     </Routes>
