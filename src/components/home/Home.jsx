@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import api from '../../services/api'
-
+import Nav from '../nav/Nav'
 import CardList from '../../components/card-list'
 import './style.scss'
 
@@ -27,38 +27,47 @@ function Home() {
   }
 
   return (
-    <section className="section home">
-      <form onSubmit={handleSubmit}>
-        <div className="filed has-addons">
-          <div className="control">
-            <input
-              className="input is-medium"
-              name="search"
-              type="search"
-              placeholder="Type anime name..."
-              minLength={minLength}
-              value={searched}
-              onChange={handleSearchedChange}
-            />
-            <p className="help is-info">Minimum {minLength}characters</p>
+    <div>
+      <header>
+        <Nav />
+      </header>
+        
+      <section className="section home">
+        <form onSubmit={handleSubmit}>
+          <div className="filed has-addons">
+            <div className="control">
+              <input
+                className="input is-medium"
+                name="search"
+                type="search"
+                placeholder="Type anime name..."
+                minLength={minLength}
+                value={searched}
+                onChange={handleSearchedChange}
+              />
+              <p className="help is-info">Minimum {minLength}characters</p>
+            </div>
+            <div className="control">
+              <button
+                type="submit"
+                className={`button is-info is-medium is-outlined ${
+                  isLoading ? 'isLoading' : ''
+                } `}
+                disabled={searched.length < minLength}
+              >
+                Search
+              </button>
+            </div>
           </div>
-          <div className="control">
-            <button
-              type="submit"
-              className={`button is-info is-medium is-outlined ${
-                isLoading ? 'isLoading' : ''
-              } `}
-              disabled={searched.length < minLength}
-            >
-              Search
-            </button>
-          </div>
-        </div>
-      </form>
-      <section className="section">
-        <CardList list={loadedList} />
+        </form>
+  
+        <section className="section">
+          <CardList list={loadedList} />
+        </section>
       </section>
-    </section>
+    </div>
+
+    
   )
 }
 
