@@ -1,5 +1,5 @@
 <h1 align="center">Anime-dex</h1>
-<p> Projeto consiste em uma aplicação de buscas com uma página detalhada com as inforamções do item selecionado. </p>
+<p align="center"> Projeto consiste em uma aplicação de buscas com uma página detalhada com as inforamções do item selecionado. </p>
 <h1 align="center">
     <a href="https://pt-br.reactjs.org/">🔗 ReactJS</a>
 </h1>
